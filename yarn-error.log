@@ -1,0 +1,84 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Java\jdk1.7.0_67\bin;C:\Program Files (x86)\Windows Live\Shared;C:\Users\Dylan\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft\Web Platform Installer\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseGit\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Yarn\bin;C:\Program Files (x86)\Common Files\Hackety Hack;C:\Users\Dylan\AppData\Local\atom\bin;C:\Users\Dylan\AppData\Local\Microsoft\WindowsApps;C:\wamp\bin\mysql\mysql5.7.14\bin;C:\Users\Dylan\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\Heroku\bin;C:\Users\Dylan\AppData\Local\Yarn\bin;C:\Users\Dylan\AppData\Roaming\Dashlane\4.6.6.23032\bin\Firefox_Extension\{442718d9-475e-452a-b3e1-fb1ee16b8e9f}\components;%DASHLANE_DLL_DIR%
+
+Yarn version: 
+  0.27.5
+
+Node version: 
+  6.9.5
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "vote-app",
+    "version": "0.0.0",
+    "license": "MIT",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/animations": "^5.0.0",
+      "@angular/common": "^5.0.0",
+      "@angular/compiler": "^5.0.0",
+      "@angular/core": "^5.0.0",
+      "@angular/forms": "^5.0.0",
+      "@angular/http": "^5.0.0",
+      "@angular/platform-browser": "^5.0.0",
+      "@angular/platform-browser-dynamic": "^5.0.0",
+      "@angular/router": "^5.0.0",
+      "core-js": "^2.4.1",
+      "rxjs": "^5.5.2",
+      "zone.js": "^0.8.14"
+    },
+    "devDependencies": {
+      "@angular/cli": "1.5.2",
+      "@angular/compiler-cli": "^5.0.0",
+      "@angular/language-service": "^5.0.0",
+      "@types/jasmine": "~2.5.53",
+      "@types/jasminewd2": "~2.0.2",
+      "@types/node": "~6.0.60",
+      "codelyzer": "~3.2.0",
+      "jasmine-core": "~2.6.2",
+      "jasmine-spec-reporter": "~4.1.0",
+      "karma": "~1.7.0",
+      "karma-chrome-launcher": "~2.1.1",
+      "karma-cli": "~1.0.1",
+      "karma-coverage-istanbul-reporter": "^1.2.1",
+      "karma-jasmine": "~1.1.0",
+      "karma-jasmine-html-reporter": "^0.2.2",
+      "protractor": "~5.1.2",
+      "ts-node": "~3.2.0",
+      "tslint": "~5.7.0",
+      "typescript": "~2.4.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@angular/common/-/common-5.0.3.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Program Files (x86)\Yarn\lib\yarn-cli.js:114873:19)
+      at ClientRequest.g (events.js:291:16)
+      at emitNone (events.js:86:13)
+      at ClientRequest.emit (events.js:185:7)
+      at TLSSocket.emitTimeout (_http_client.js:620:10)
+      at TLSSocket.g (events.js:291:16)
+      at emitNone (events.js:86:13)
+      at TLSSocket.emit (events.js:185:7)
+      at TLSSocket.Socket._onTimeout (net.js:339:8)
+      at ontimeout (timers.js:365:14)

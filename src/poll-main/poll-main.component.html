@@ -1,0 +1,32 @@
+<div class="container mt-2" *ngIf="poll">
+
+  <div *ngIf="myPoll">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="question" class="font-weight-bold"></label>
+            <input type="text" class="form-control" [ngModel]="poll.question" id="question">
+          </div>
+      <div class="col-md-4">
+          <i class="fa fa-trash"></i>
+      </div>
+      <div class="col-md-4">  </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 text-white">
+      <h5 [innerText]="poll.question"></h5>
+      <label for="options" class="font-weight-bold"> Vote Options</label>
+      <select id="options" class="form-control" [(ngModel)]="vote">
+        <option value=""></option>
+        <option *ngFor="let option of poll.options" [innerText]="option.name"></option>
+      </select>
+      <div class="mt-2 text-center">
+        <button class="btn btn-outline-success" type="button" (click)="putPoll()"><i class="fa fa-floppy-o"></i> Vote</button>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <div id="piechart"></div>
+    </div>
+  </div>
+</div>

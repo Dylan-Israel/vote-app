@@ -1,0 +1,52 @@
+<div class="container-fluid bg-dark">
+  <div class="container text-white pb-2">
+    <h5 class="display-4 text-center text-success">
+      <i class="fa fa-plus"></i> Create a New Poll</h5>
+
+    <div class="row form-group">
+      <div class="col-md-6">
+
+        <label class="font-weight-bold" for="question">Question</label>
+        <input type="text" #questionModel="ngModel" class="form-control" id="question" [(ngModel)]="newPoll.question" minlength="5" required>
+        <div *ngIf="questionModel.errors?.required && questionModel.touched" class="mt-2 alert alert-danger text-white">
+            <i class="fa fa-exclamation-circle"></i> Question is required.
+         </div>
+         <div *ngIf="questionModel.errors?.minlength && questionModel.touched" class="mt-2 alert alert-danger text-white">
+            <i class="fa fa-exclamation-circle"></i> Question minlength is 5.
+         </div>
+      </div>
+      <div class="col-md-6">
+        <label class="font-weight-bold" for="option">Options</label>
+        <div class="input-group">
+          <input type="text"  class="form-control" id="option" [(ngModel)]="newOption" #newOptionEx="ngModel" required minlength="2">
+          <span class="input-group-addon bg-success btn btn-success text-white" (click)="addNewOption()">
+            <i class="fa fa-plus"></i>
+          </span>
+
+        </div>
+        <div *ngIf="newOptionEx.errors?.minlength && newOptionEx.touched" class="mt-2 alert alert-danger text-white">
+            <i class="fa fa-exclamation-circle"></i> Options minlength is 2.
+         </div>
+        <span *ngFor="let option of newPoll.options; let i = index;">
+          <label class="mt-1 font-weight-bold" [innerText]="'Option ' + i + 1">
+          </label>
+          <div class="input-group">
+          <input type="text"  name="option" class="form-control" [disabled]="true" minlength="5" [ngModel]="option.name" required>
+          <span class="input-group-addon bg-danger btn btn-danger" (click)="removeNewOption(i)">
+            <i class="fa fa-minus"></i>
+          </span>
+      </div>
+
+      </span>
+
+    </div>
+  </div>
+
+  <div class="text-center">
+      <!-- [disabled]="isSaveDisabled()" -->
+    <button class="btn btn-outline-success" type="button" (click)="postPoll()" >
+      <i class="fa fa-floppy-o"></i> Save
+    </button>
+  </div>
+</div>
+</div>

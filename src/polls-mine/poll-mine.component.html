@@ -1,0 +1,6 @@
+<div class="container text-center">
+  <h5 class="display-4 text-white">My Polls</h5>
+
+  <button *ngFor="let poll of myPolls" class="btn btn-block btn-lg btn-primary mb-2" [innerText]="poll.question" [routerLink]="'/mypolls/poll/'+ poll._id">
+  </button>
+</div>
